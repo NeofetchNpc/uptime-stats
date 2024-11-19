@@ -14,8 +14,8 @@ export function formatDuration(seconds) {
       m = parseInt(m % 60);
     }
   }
-  let text = `${s} 秒`;
-  if (m > 0) text = `${m} 分 ${text}`;
-  if (h > 0) text = `${h} 小时 ${text}`;
+  let text = `${s} Detik`;
+  if (m > 0) text = `${m} Menit ${text}`;
+  if (h > 0) text = `${h} Jam ${text}`;
   return text;
 }
