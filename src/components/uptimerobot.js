@@ -7,9 +7,9 @@ import Link from './link';
 function UptimeRobot({ apikey }) {
 
   const status = {
-    ok: '正常',
-    down: '无法访问',
-    unknow: '未知'
+    ok: 'Normal',
+    down: 'Tidak Dapat Diakses',
+    unknow: 'Tidak Diketahui'
   };
 
   const { CountDays, ShowLink } = window.Config;
@@ -33,25 +33,25 @@ function UptimeRobot({ apikey }) {
           let text = data.date.format('YYYY-MM-DD ');
           if (data.uptime >= 100) {
             status = 'ok';
-            text += `可用率 ${formatNumber(data.uptime)}%`;
+            text += `Tingkat Ketersediaan ${formatNumber(data.uptime)}%`;
           }
           else if (data.uptime <= 0 && data.down.times === 0) {
             status = 'none';
-            text += '无数据';
+            text += 'Tidak Ada Data';
           }
           else {
             status = 'down';
-            text += `故障 ${data.down.times} 次，累计 ${formatDuration(data.down.duration)}，可用率 ${formatNumber(data.uptime)}%`;
+            text += `Gangguan ${data.down.times} kali, Total ${formatDuration(data.down.duration)}, Tingkat Ketersediaan ${formatNumber(data.uptime)}%`;
           }
           return (<i key={index} className={status} data-tip={text} />)
         })}
       </div>
       <div className='summary'>
-        <span>今天</span>
+        <span>Hari Ini</span>
         <span>
           {site.total.times
-            ? `最近 ${CountDays} 天故障 ${site.total.times} 次，累计 ${formatDuration(site.total.duration)}，平均可用率 ${site.average}%`
-            : `最近 ${CountDays} 天可用率 ${site.average}%`}
+            ? `Selama ${CountDays} hari terakhir terjadi gangguan ${site.total.times} kali, Total ${formatDuration(site.total.duration)}, Rata-rata Ketersediaan ${site.average}%`
+            : `Selama ${CountDays} hari terakhir Tingkat Ketersediaan ${site.average}%`}
         </span>
         <span>{site.daily[site.daily.length - 1].date.format('YYYY-MM-DD')}</span>
       </div>
