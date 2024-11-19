@@ -9,10 +9,11 @@ window.Config = {
     'm798050886-d7280453335ca2c190817858',
     'm798050940-9ac43ed45dd931ed0a53252e',
     'm798050969-d9c1960b93adb3bb6ac3a345',
+    'm798050994-9d7aaff0436970cbcf0bde53',
   ],
 
   // 日志天数
-  CountDays: 90,
+  CountDays: 30,
 
   // 是否显示检测站点的链接
   ShowLink: true,
