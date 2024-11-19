@@ -20,7 +20,7 @@ window.Config = {
   Navi: [
     {
       text: 'Homepage',
-      url: 'https://uptime.neastooid.xyz'
+      url: 'https://github.com/NeofetchNpc'
     },
     {
       text: 'GitHub',
