@@ -23,7 +23,7 @@ function App() {
           ))}
         </div>
         <div id='footer'>
-          <p>&copy; <Link to='https://uptime.neastooid.xyz/' text='uptime.neastooid.xyz' />, Version {Package.version} By YusupKakuu ❤️‍🩹</p>
+          <p>&copy; <Link to='https://uptime.neastooid.xyz/' text='Uptime-NeastooID' />, Version {Package.version} By YusupKakuu ❤️‍🩹</p>
         </div>
       </div>
     </>
