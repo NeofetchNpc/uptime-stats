@@ -1,8 +1,6 @@
 # uptime-status
 
-一个基于 UptimeRobot API 的在线状态面板
-
-<img width="1152" alt="image" src="https://user-images.githubusercontent.com/25887822/178935137-6d23521d-5894-4fb8-922d-3575be4f7abc.png">
+<img width="1152" alt="image" src="https://raw.githubusercontent.com/NeofetchNpc/ArchiveTMP/refs/heads/main/img-mp4/Screenshot_20241119_112722_Chrome.png">
 
 ## 事先准备
 
@@ -22,19 +20,4 @@
 
 ⚠️ 如果没有修改代码的需求，您不需要 git clone 本项目，只需要下载 Release 的文件包即可。
 
-## 接口代理
-
-对于想自己搭建接口的代理的，可以参考以下 nginx 的配置文件：
-
-```
-server {
-  listen [::]:80;
-  server_name cors.status.org.cn;
-  location / {
-    proxy_ssl_server_name on;
-    proxy_pass https://api.uptimerobot.com/;
-    proxy_hide_header Access-Control-Allow-Origin;
-    add_header Access-Control-Allow-Origin * always;
-  }
-}
-```
+# Malas Menerjemahkan :3
